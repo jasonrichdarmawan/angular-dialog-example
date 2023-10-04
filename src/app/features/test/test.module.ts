@@ -11,12 +11,15 @@ import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { BankdetailComponent } from './presentation/components/bankdetail/bankdetail.component';
 
 @NgModule({
   declarations: [
     DialogPageComponent,
     OverviewComponent,
     DialogExampleComponent,
+    BankdetailComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
 
     // TODO: standalone component in Angular 14 for DialogPageComponent
     MatSlideToggleModule,
+    MatIconModule,
 
     // TODO: standalone component in Angular 14 for DialogExampleComponent and OverviewComponent
     MatFormFieldModule,

@@ -12,7 +12,9 @@ export class OverviewComponent implements OnInit {
   animal!: string;
   name!: string;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+    this.animal = "Dog"
+  }
 
   ngOnInit(): void {
   }
@@ -23,7 +25,10 @@ export class OverviewComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log('The dialog was closed', result);
+
+      if (result === undefined) { return };
+
       this.animal = result;
     });
   }

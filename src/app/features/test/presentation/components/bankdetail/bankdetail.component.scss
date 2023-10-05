@@ -1,3 +1,20 @@
+.currency-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.currency-container {
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.currency-container > :last-child {
+    padding-bottom: 1rem;
+}
+
 .bank-detail-container {
     display: flex;
     justify-content: space-between;

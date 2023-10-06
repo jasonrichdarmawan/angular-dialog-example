@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogExampleComponent } from '../dialog-example/dialog-example.component';
+import { ExampleDialog } from '../example-dialog/example.dialog';
 import { DialogExampleModel } from '../../../domain/entities/dialog-example-model';
 
 @Component({
@@ -20,7 +20,7 @@ export class OverviewComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogExampleComponent, {
+    const dialogRef = this.dialog.open(ExampleDialog, {
       data: { name: this.name, animal: this.animal } as DialogExampleModel,
     });
 

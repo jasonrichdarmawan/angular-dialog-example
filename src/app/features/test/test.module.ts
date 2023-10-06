@@ -6,7 +6,7 @@ import { DialogPageComponent } from './presentation/pages/dialog-page/dialog-pag
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { OverviewComponent } from './presentation/components/overview/overview.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { DialogExampleComponent } from './presentation/components/dialog-example/dialog-example.component';
+import { ExampleDialog } from './presentation/components/example-dialog/example.dialog';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
@@ -19,7 +19,7 @@ import { ImageExampleComponent } from './presentation/components/image-example/i
   declarations: [
     DialogPageComponent,
     OverviewComponent,
-    DialogExampleComponent,
+    ExampleDialog,
     BankdetailComponent,
     ImageExampleComponent,
   ],

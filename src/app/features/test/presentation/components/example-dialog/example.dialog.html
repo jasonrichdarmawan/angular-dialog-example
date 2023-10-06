@@ -6,8 +6,16 @@
         <mat-label>Favorite Animal</mat-label>
         <input matInput [(ngModel)]="data.animal">
     </mat-form-field><br>
-    <!-- [checked]="data.isChecked" is not two-way data binding, we have to call (change)="data.isChecked = $event.checked" -->
-    <mat-checkbox [checked]="data.isChecked" (change)="data.isChecked = $event.checked">Set as primary withdrawal account</mat-checkbox>
+    <!-- 
+        1st alternative
+        [checked]="data.isChecked" is not two-way data binding, we have to call (change)="data.isChecked = $event.checked"
+        
+        2nd alternative
+        [(ngModel)]="data.isChecked"
+    -->
+    <mat-checkbox
+        [(ngModel)]="data.isChecked"
+    >Set as primary withdrawal account</mat-checkbox>
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">No Thanks</button>

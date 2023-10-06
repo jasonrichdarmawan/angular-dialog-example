@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog-page.component.scss']
 })
 export class DialogPageComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

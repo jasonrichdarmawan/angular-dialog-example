@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BankdetailComponent } from './presentation/components/bankdetail/bankdetail.component';
 import { ImageExampleComponent } from './presentation/components/image-example/image-example.component';
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 @NgModule({
   declarations: [
@@ -31,12 +32,16 @@ import { ImageExampleComponent } from './presentation/components/image-example/i
     MatSlideToggleModule,
     MatIconModule,
 
-    // TODO: standalone component in Angular 14 for DialogExampleComponent and OverviewComponent
+    // TODO: standalone component in Angular 14 for ExampleDialog and OverviewComponent
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule, // for css and action (without this dialog will not close when (click) or [mat-dialog-close])
     FormsModule,
     MatButtonModule, // for css
+
+    // TODO: standalone component in Angular 14 for ExampleDialog
+    MatCheckboxModule,
+
   ]
 })
 export class TestModule { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ExampleDialog } from '../example-dialog/example.dialog';
-import { DialogExampleModel } from '../../../domain/entities/dialog-example-model';
+import { ExampleEntity } from '../../../domain/entities/example.entity';
 
 @Component({
   selector: 'app-overview',
@@ -11,9 +11,10 @@ import { DialogExampleModel } from '../../../domain/entities/dialog-example-mode
 export class OverviewComponent implements OnInit {
   animal!: string;
   name!: string;
+  isChecked: boolean;
 
   constructor(public dialog: MatDialog) {
-    this.animal = "Dog"
+    this.isChecked = true
   }
 
   ngOnInit(): void {
@@ -21,7 +22,12 @@ export class OverviewComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ExampleDialog, {
-      data: { name: this.name, animal: this.animal } as DialogExampleModel,
+      data:
+        {
+          name: this.name,
+          animal: this.animal,
+          isChecked: this.isChecked,
+        } as ExampleEntity,
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -29,7 +35,9 @@ export class OverviewComponent implements OnInit {
 
       if (result === undefined) { return };
 
-      this.animal = result;
+      this.name = result.name
+      this.animal = result.animal;
+      this.isChecked = result.isChecked;
     });
   }
 

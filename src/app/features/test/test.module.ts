@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BankdetailComponent } from './presentation/components/bankdetail/bankdetail.component';
+import { ImageExampleComponent } from './presentation/components/image-example/image-example.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BankdetailComponent } from './presentation/components/bankdetail/bankde
     OverviewComponent,
     DialogExampleComponent,
     BankdetailComponent,
+    ImageExampleComponent,
   ],
   imports: [
     CommonModule,

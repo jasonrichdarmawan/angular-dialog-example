@@ -21,4 +21,7 @@ export class ExampleDialog implements OnInit {
     this.dialogRef.close();
   }
 
+  save(data: ExampleEntity) {
+    this.dialogRef.close(data);
+  }
 }

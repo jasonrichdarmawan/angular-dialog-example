@@ -14,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BankdetailComponent } from './presentation/components/bankdetail/bankdetail.component';
 import { ImageExampleComponent } from './presentation/components/image-example/image-example.component';
-import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FilterExampleComponent } from './presentation/components/filter-example/filter-example.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     ExampleDialog,
     BankdetailComponent,
     ImageExampleComponent,
+    FilterExampleComponent,
   ],
   imports: [
     CommonModule,

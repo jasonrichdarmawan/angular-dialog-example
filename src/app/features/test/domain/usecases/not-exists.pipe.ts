@@ -8,7 +8,7 @@ export class NotExistsPipe implements PipeTransform {
 
   transform(a: FilterExampleEntity[], b: FilterExampleEntity[]): FilterExampleEntity[] {
     let result = a.filter(e1 => !b.find(e2 => e2 === e1));
-    console.log('notExists Pipe');
+    console.log('notExists pipe called');
     return result;
   }
 

@@ -19,9 +19,12 @@ export class FilterExampleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @deprecated use notExists pipe instead of notExists function
+   */
   notExists(a: FilterExampleEntity[], b: FilterExampleEntity[]) {
     let result = a.filter(e1 => !b.find(e2 => e2 === e1));
-    console.log('notExists function');
+    console.warn('deprecated notExists function called');
     return result;
   }
 }

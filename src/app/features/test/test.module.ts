@@ -16,6 +16,7 @@ import { BankdetailComponent } from './presentation/components/bankdetail/bankde
 import { ImageExampleComponent } from './presentation/components/image-example/image-example.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FilterExampleComponent } from './presentation/components/filter-example/filter-example.component'
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FilterExampleComponent } from './presentation/components/filter-example
 
     // TODO: standalone component in Angular 14 for ExampleDialog
     MatCheckboxModule,
-
+    NgSelectModule,
+    FormsModule,
   ]
 })
 export class TestModule { }

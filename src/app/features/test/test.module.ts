@@ -17,6 +17,7 @@ import { ImageExampleComponent } from './presentation/components/image-example/i
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FilterExampleComponent } from './presentation/components/filter-example/filter-example.component'
 import { NgSelectModule } from '@ng-select/ng-select';
+import { NotExistsPipe } from './domain/usecases/not-exists.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
     BankdetailComponent,
     ImageExampleComponent,
     FilterExampleComponent,
+
+    // TODO: standalone component in Angular 14 for FilterExampleComponent
+    NotExistsPipe,
   ],
   imports: [
     CommonModule,

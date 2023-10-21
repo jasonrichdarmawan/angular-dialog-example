@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface FilterExampleEntity {
-  name: string
-}
+import { FilterExampleEntity } from '../../../domain/entities/filter-example.entity';
 
 @Component({
   selector: 'app-filter-example',
@@ -24,7 +21,7 @@ export class FilterExampleComponent implements OnInit {
 
   notExists(a: FilterExampleEntity[], b: FilterExampleEntity[]) {
     let result = a.filter(e1 => !b.find(e2 => e2 === e1));
-    console.log(result);
+    console.log('notExists function');
     return result;
   }
 }

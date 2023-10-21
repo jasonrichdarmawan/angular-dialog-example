@@ -3,5 +3,6 @@
     <p>expected value: B</p>
 </div>
 <div>
-    <p *ngFor="let item of this.notExists(this.a, this.b)">actual value: {{item.name}}</p>
+    <!-- <p *ngFor="let item of this.notExists(a, b)">actual value: {{item.name}}</p> -->
+    <p *ngFor="let item of (a | notExists: b)">actual value: {{item.name}}</p>
 </div>

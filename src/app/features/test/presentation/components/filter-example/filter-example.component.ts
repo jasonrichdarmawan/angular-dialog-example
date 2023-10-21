@@ -16,7 +16,7 @@ export class FilterExampleComponent implements OnInit {
 
   constructor() {
     this.a = [ { name: "A" }, { name: "B" } ]
-    this.b = [ { name: "A" } ]
+    this.b = [ this.a[0] ]
   }
 
   ngOnInit(): void {

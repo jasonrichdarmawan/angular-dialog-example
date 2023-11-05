@@ -17,14 +17,20 @@
         [(ngModel)]="data.isChecked"
     >Set as primary withdrawal account</mat-checkbox>
 
+    <!--
+        appendTo="body" to fix ng-select dropdown not working in dialog
+        reference: https://stackoverflow.com/questions/61011313/ng-select-dropdown-is-hidden-by-the-dialog
+    -->
     <ng-select [items]="cars"
                bindLabel="name"
                bindValue="id"
-               [(ngModel)]="selectedCar">
+               [(ngModel)]="selectedCar"
+               appendTo="body"
+    >
     </ng-select>
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">No Thanks</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
-    <button mat-button (click)="save(this.data)" cdkFocusInitial>Ok</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok w/ [mat-dialog-close]</button>
+    <button mat-button (click)="save(this.data)" cdkFocusInitial>Ok w/ (click)</button>
 </div>

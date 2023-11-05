@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ExampleDialog } from '../example-dialog/example.dialog';
-import { ExampleEntity } from '../../../domain/entities/example.entity';
+import { ExampleEntity } from 'src/app/commons/example-dialog/domain/entities/example.entity';
+import { ExampleDialog } from 'src/app/commons/example-dialog/presentation/components/example-dialog/example.dialog';
 
 @Component({
   selector: 'app-overview',
